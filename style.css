@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    overflow: hidden;
+}
+h1 {text-align: center;}
+.button {
+    background-color: rgb(140, 189, 8); /* Green */
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button:hover{
+    background: rgb(53, 78, 73);  
+}
+.button1 {border-radius: 2px;}
+.button2 {border-radius: 4px; width: 15%;}
+.button3 {border-radius: 8px;}
+.button4 {border-radius: 12px;}
+.button5 {border-radius: 50%;}
+
+
+ul {
+    list-style-type: none;
+    width: 30%;
+    padding: 5px;
+    /* border: 1px solid rgb(20, 19, 19); */
+  }
+  ul li {
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  ul li:last-child {
+    border-bottom: none
+  }
+#patternList{
+    overflow:auto;
+    height:250px;
+}

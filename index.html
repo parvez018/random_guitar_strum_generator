@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Strumming Patterns</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <canvas class="myCanvas">
+      <p>Add suitable fallback here.</p>
+    </canvas>
+    <button class="button button2" id="newpattern" onclick="drawBars()">New Pattern (n)</button>
+    <button class="button button2" id="autopattern" onclick="autoRefresh()">Auto Refresh (a)</button>
+    <button class="button button2" id="clearpattern" onclick="clearPatterns()">Clear List (c)</button>
+    <button class="button button2" id="playpattern" onclick="playPattern()">Play Pattern (p)</button>
+    
+    
+    <div id="patterns">
+      <ul id="patternList">
+      </ul>
+  </div>
+  
+    
+    
+    
+    <script src="main.js"></script>
+    
+  </body>
+</html>
