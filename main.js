@@ -319,9 +319,26 @@ function getRandomPattern(){
 }
 
 
+function prettyPattern(pattern){
+	strPat = "";
+	for(let i=0;i<pattern.length;i++){
+		if (pattern[i] == 0){
+		strPat += '\xa0';
+		}
+		else if(i%2==0){
+			strPat += "D";
+		}
+		else{
+			strPat += "U";
+		}
+	}
+	return strPat;	
+}
+
+
 function addPattern2List(pattern){
     var node = document.createElement("LI");                 // Create a <li> node
-    var textnode = document.createTextNode(pattern.toString());         // Create a text node
+    var textnode = document.createTextNode(prettyPattern(pattern));         // Create a text node
     node.appendChild(textnode);                              // Append the text to <li>
     plist = document.getElementById("patternList")
     // plist.appendChild(node);  
@@ -448,6 +465,8 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
   
+
+
 async function playPattern(){
     plist = document.getElementById("patternList");
     var allPatterns = plist.getElementsByTagName("li");
@@ -479,7 +498,7 @@ document.addEventListener("keypress", function onPress(event) {
     // }
     if (event.key == "n"){
         drawBars();
-        playTone("G3");
+        // playTone("G3");
     }
     else if(event.key=="a"){
         autoRefresh();
@@ -491,6 +510,10 @@ document.addEventListener("keypress", function onPress(event) {
         playPattern();
     }
 });
+
+
+
+
 setBground();
 drawBars();
 // drawLoading();
